@@ -115,7 +115,7 @@ export const timelineData: TimelineItem[] = [
     title: '개인 포트폴리오 사이트 설계 및 구현',
     description: `
     [ Project Summary ]
-    지금 보고 있는 이 포트폴리오 사이트입니다.
+    지금 보고 있으신 이 포트폴리오 사이트입니다.
     프로젝트 경험과 사고 과정을 정리해 보여주는 것을 목표로 Vue.js 기반으로 직접 설계하고 구현했습니다.
     Vite 기반 프로젝트에서 빌드/배포 환경 차이로 발생한 자산 로딩 문제를 분석하고, import 기반 자산 관리 방식으로 해결했습니다.
     `
