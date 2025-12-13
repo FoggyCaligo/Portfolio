@@ -15,7 +15,7 @@
 <template>
 
   <div class="flex justify-between w-full ">
-    <div class="flex w-full  justify-between h-[calc(100vh-160px)] overflow-hidden gap-12">
+    <div class="flex w-full justify-between h-[calc(100vh-160px)] overflow-hidden gap-12">
       <!-- 🔹 Timeline (스크롤 전용) -->
       <div class="flex-shrink-0">
         <TimeLine
@@ -27,12 +27,12 @@
 
       <!-- 🔹 Content (고정) -->
       <div class="flex-1 pt-10">
-        <div class="h-full p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+        <div class="h-full min-h-[600px] p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
           <h3 class="text-3xl font-bold mb-4">
             {{ selectedItem?.title }}
           </h3>
           <h5>{{ selectedItem?.year }}</h5>
-          <p class="text-gray-700 word-break break-keep whitespace-pre-line">
+          <p class="text-gray-700 break-words break-all whitespace-pre-line">
             {{ selectedItem?.description }}
           </p>
         </div>
