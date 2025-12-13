@@ -1,3 +1,8 @@
+import icon_univ from '/src/assets/icons/icon_univ.png'
+import icon_briefcase from '/src/assets/icons/icon_briefcase.png'
+import icon_wing from '/src/assets/icons/icon_wing.png'
+
+
 export interface TimelineItem {
   year: number
   icon?: string
@@ -8,7 +13,7 @@ export interface TimelineItem {
 export const timelineData: TimelineItem[] = [
   {
     year: 2020,
-    icon: '/src/assets/icons/icon_univ.png',
+    icon: icon_univ,
     title: 'c++로 아스키 테트리스 일주일 안에 완성',
     description: `
     [ Project Summary ]
@@ -72,7 +77,7 @@ export const timelineData: TimelineItem[] = [
   {
     year: 2024,
     title: `메디25케어 (실무 프로젝트)`,
-    icon: '/src/assets/icons/icon_briefcase.png',
+    icon: icon_briefcase,
     description: `[ Project Summary ]
             간병인과 보호자를 연결하는 매칭 서비스의 프론트엔드 개발에 참여했습니다.
           기획 문서 없이 타사 서비스를 기준으로 구현이 진행된 프로젝트로,
@@ -118,7 +123,7 @@ export const timelineData: TimelineItem[] = [
   },
   {
     year: 2026,
-    icon: '/src/assets/icons/icon_wing.png',
+    icon: icon_wing,
     title: '다음 도약',
     description: '확장 예정'
   }
