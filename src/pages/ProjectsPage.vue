@@ -3,9 +3,8 @@
   import { timelineData } from '../data/timeline'
   import TimeLine from '../components/TimeLine.vue'
   import type { TimelineItem } from '../data/timeline'
-  import dayjs from 'dayjs'
   
-  const selectedItem = ref<TimelineItem | undefined>(timelineData[0])
+  const selectedItem = ref<TimelineItem | undefined>(timelineData[4])
 
   const handleSelect = (item : TimelineItem) => {
     selectedItem.value = item
@@ -28,11 +27,12 @@
 
       <!-- 🔹 Content (고정) -->
       <div class="flex-1 pt-10">
-        <div class="h-full p-8 bg-white rounded-xl shadow-lg">
-          <h2 class="text-3xl font-bold mb-4">
-            {{ selectedItem?.year }} Projects
-          </h2>
-          <p class="text-gray-700">
+        <div class="h-full p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+          <h3 class="text-3xl font-bold mb-4">
+            {{ selectedItem?.title }}
+          </h3>
+          <h5>{{ selectedItem?.year }}</h5>
+          <p class="text-gray-700 word-break break-keep whitespace-pre-line">
             {{ selectedItem?.description }}
           </p>
         </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, toRef } from 'vue'
+  import { ref, watch, nextTick } from 'vue'
   import type { TimelineItem } from '../data/timeline'
   import { useScrollIntoView } from '../composables/useScrollIntoView'
   const props = defineProps<{
@@ -21,16 +21,28 @@
   const classUnSelected = "bg-white";
   
   const itemRefs = ref<Record<number, HTMLElement | undefined>>({});
-  useScrollIntoView(
-    toRef(props, 'selectedItem'),
-    (item) => itemRefs.value[item.year]
+
+  function setItemRef(year: number, el: unknown) {
+    if (el instanceof HTMLElement) {
+      itemRefs.value[year] = el
+    }
+  }
+
+  watch(
+    () => props.selectedItem,
+    async (item) => {
+      if (!item) return
+      await nextTick()
+      useScrollIntoView(itemRefs.value[item.year])
+    },
+    { immediate: true }
   )
 </script>
   
 <template>
   <div :class="classMainWrapper" >
     <div :class="classCenterLine"/>
-    <div v-for="item in items" :key="item.year" :class="classItem" @click="emit('select', item)" :ref="el => itemRefs[item.year] = el">
+    <div v-for="item in items" :key="item.year" :class="classItem" @click="emit('select', item)" :ref="el => setItemRef(item.year, el)">
       <div :class="[
         'absolute -translate-x-full pr-6 whitespace-nowrap transition-transform transition-colors duration-300 ease-out',
         item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-white',
