@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref, watch, nextTick } from 'vue'
-  import type { TimelineItem } from '../data/timeline'
+  import type { TimelineItem } from '../data/timeLine'
   import { useScrollIntoView } from '../composables/useScrollIntoView'
   const props = defineProps<{
     items: TimelineItem[]

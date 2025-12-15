@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { TimelineItem } from '../data/timeline'
+  import type { TimelineItem } from '../data/timeLine'
   
   defineProps<{
     items: TimelineItem[]

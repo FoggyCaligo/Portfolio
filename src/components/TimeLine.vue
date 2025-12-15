@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { TimelineItem } from '../data/timeline'
+  import type { TimelineItem } from '../data/timeLine'
   import TimeLineDesktop from './TimeLineDesktop.vue';
   import TimeLineMobile from './TimeLineMobile.vue';
   
