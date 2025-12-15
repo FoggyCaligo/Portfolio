@@ -11,10 +11,10 @@
     (e: 'select', item: TimelineItem): void
   }>()
 
-  const classMainWrapper = "relative w-24 h-full flex flex-col ml-20 mr-2 mt-10 mb-10 gap-8 box-border items-center";
+  const classMainWrapper = "relative w-24 h-full flex flex-col ml-20 mr-2 mt-10 gap-8 box-border items-center";
   const classCenterLine = "absolute top-0 w-0 h-full  border-4 border-white left-1/2 -translate-x-1/2";
-  const classItem = 'relative flex flex-row justify-center items-center w-full h-full z-10 cursor-pointer';
-  const classCircleBase = 'rounded-full transition-transform transition-colors duration-300 ease-out flex';
+  const classItem = 'relative flex flex-row justify-center items-center w-full h-full z-10 caret-none select-none cursor-pointer ';
+  const classCircleBase = 'rounded-full no-select transition-transform transition-colors duration-300 ease-out flex  caret-none select-none cursor-pointer ';
   const classCircleBig = "w-24 h-24";
   const classCircleSmall = "w-10 h-10";
   const classSelected = "bg-yellow scale-110";
@@ -44,7 +44,7 @@
     <div :class="classCenterLine"/>
     <div v-for="item in items" :key="item.year" :class="classItem" @click="emit('select', item)" :ref="el => setItemRef(item.year, el)">
       <div :class="[
-        'absolute -translate-x-full pr-6 whitespace-nowrap transition-transform transition-colors duration-300 ease-out',
+        'absolute -translate-x-full pr-6 whitespace-nowrap transition-transform transition-colors duration-300 ease-out no-caret',
         item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-white',
         item.icon ? 'text-2xl' : 'text-lg'
       ]">

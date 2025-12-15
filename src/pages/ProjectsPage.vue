@@ -24,10 +24,9 @@
           @select="handleSelect"
         />
       </div>
-
       <!-- 🔹 Content (고정) -->
-      <div class="flex-1 pt-10">
-        <div class="h-full min-h-[600px] p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+      <div class="flex-1 pt-10 caret-none select-none ">
+        <div class="h-full p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
           <h3 class="text-3xl font-bold mb-4">
             {{ selectedItem?.title }}
           </h3>
@@ -37,50 +36,6 @@
           </p>
         </div>
       </div>
-  </div>
-
-
-
-
-    <!-- 
-  <div class="flex-shrink-0">
-    <TimeLine
-      :items="timelineData"
-      :selectedItem="selectedItem"
-      @select="handleSelect"
-    />
-  </div>
-  <div class="flex-1">
-    <div class="h-full p-8 bg-white rounded-xl shadow-lg">
-      <h2 class="text-3xl font-bold mb-4">
-        {{ selectedItem?.year }} Projects
-      </h2>
-      <p class="text-gray-700">
-        {{ selectedItem?.description }}
-      </p>
     </div>
-  </div> -->
-
-
-
-
-    <!-- <div class="w-fit flex flex-col ">
-      <TimeLine
-        :items="timelineData"
-        :selectedItem="selectedItem"
-        @select="handleSelect"
-      />
-    </div>
-
-    <div class=" sticky top-0 left-0 w-full h- w-3/4 p-8 bg-white rounded-xl shadow-lg">
-      <h2 class="text-3xl font-bold mb-4">
-        {{ selectedItem?.year }} Projects
-      </h2>
-
-      <p class="text-gray-700">
-        여기에 해당 연도 프로젝트 정보가 표시됩니다.
-        {{ selectedItem?.description }}
-      </p>
-    </div> -->
   </div>
 </template>
