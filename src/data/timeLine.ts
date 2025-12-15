@@ -1,6 +1,6 @@
-import icon_univ from '/src/assets/icons/icon_univ.png'
-import icon_briefcase from '/src/assets/icons/icon_briefcase.png'
-import icon_wing from '/src/assets/icons/icon_wing.png'
+import icon_univ from '/src/assets/icons/icon_univ.svg'
+import icon_briefcase from '/src/assets/icons/icon_briefcase.svg'
+import icon_wing from '/src/assets/icons/icon_wing.svg'
 
 
 export interface TimelineItem {
