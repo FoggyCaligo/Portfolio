@@ -16,26 +16,23 @@ const getMenuClass = (path: string) => {
 </script>
 
 <template>
-  <header 
-    class="sticky top-0 left-0 w-full h-20 flex items-center justify-between 
-           border-b-4 border-white z-50 bg-brand"
-  >
+<header class="sticky top-0 left-0 w-full h-fit flex items-center justify-between border-b-4 border-white z-50 bg-brand pb-5">
     <!-- Left Title -->
     <div class="flex flex-col leading-tight">
       <RouterLink 
         to="/" 
-        class="text-4xl font-semibold text-white select-none"
+        class="text-6xl font-semibold text-white select-none"
       >
         Shin - Jaeyong
       </RouterLink>
 
-      <span class="text-xl text-white/80 ml-0">
+      <span class="text-3xl text-white/80 ml-0">
         Frontend Developer
       </span>
     </div>
 
     <!-- Right Menu -->
-    <nav class="flex items-center gap-8 font-medium text-white text-lg">
+    <nav class="flex items-center gap-8 font-medium text-white text-3xl">
       <RouterLink to="/" :class="getMenuClass('/')"> | Projects</RouterLink>
       <RouterLink to="/about" :class="getMenuClass('/about')"> | About</RouterLink>
       <RouterLink to="/skills" :class="getMenuClass('/skills')"> | Skills</RouterLink>

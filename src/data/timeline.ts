@@ -125,5 +125,26 @@ export const timelineData: TimelineItem[] = [
     icon: icon_wing,
     title: '다음 도약',
     description: '확장 예정'
+  },
+  {
+    year: 2027,
+    title: '--',
+    description: '--'
+  },
+  {
+    year: 2028,
+    title: '--',
+    description: '--'
+  },
+  {
+    year: 2029,
+    title: '--',
+    description: '--'
+  },
+  {
+    year: 2030,
+    title: '--',
+    description: '--'
   }
+
 ]
