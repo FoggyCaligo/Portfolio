@@ -15,8 +15,8 @@
 <template>
 
   <div class="flex justify-between w-full ">
-    <div class="flex w-full justify-between h-[calc(100vh-160px)] overflow-hidden gap-12">
-      <!-- 🔹 Timeline (스크롤 전용) -->
+    <div class="flex w-full justify-between h-[calc(100dvh-160px)] overflow-hidden gap-12 pt-10">
+      <!-- Timeline (스크롤 전용) -->
       <div class="flex-shrink-0">
         <TimeLine
           :items="timelineData"
@@ -24,9 +24,9 @@
           @select="handleSelect"
         />
       </div>
-      <!-- 🔹 Content (고정) -->
-      <div class="flex-1 pt-10 caret-none select-none ">
-        <div class="h-full p-8 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+      <!-- Content (고정 & 내부 스크롤) -->
+      <div class="flex-1 caret-none select-none ">
+        <div class="h-full py-8 px-12 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
           <h3 class="text-3xl font-bold mb-4">
             {{ selectedItem?.title }}
           </h3>

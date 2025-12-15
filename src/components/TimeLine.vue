@@ -14,7 +14,7 @@
 </script>
   
 <template>
-  <div class="h-full overflow-y-auto scrollbar-hide">
+  <div class="h-full w-fit overflow-y-auto scrollbar-hide">
     <div class="hidden md:block">
       <TimeLineDesktop
         :items="items"
