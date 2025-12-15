@@ -14,8 +14,7 @@
 
 <template>
 
-
-  <div class="flex justify-between w-full ">
+  <!-- <div class="flex justify-between w-full "> -->
     <div class="flex w-full justify-between h-[calc(100dvh-160px)] overflow-hidden gap-12 pt-10">
       <div class="flex-shrink-0">
         <TimeLine
@@ -36,5 +35,5 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template> 
