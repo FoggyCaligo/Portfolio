@@ -18,25 +18,35 @@
   
   
 </script>
-  
 <template>
-  <div class="w-full flex flex-row gap-8 overflow-x-auto py-4 px-2 box-border">
-    <div v-for="item in items" :key="item.year" class="flex flex-col items-center cursor-pointer" @click="emit('select', item)">
+  <div class="flex gap-6 overflow-x-scroll px-4 py-6 scrollbar-hide">
+    <div
+      v-for="item in items"
+      :key="item.year"
+      class="flex-shrink-0 flex flex-col items-center cursor-pointer"
+      @click="$emit('select', item)"
+    >
       <div
-          :class="[
-            classCircleBase,
-            item.icon ? classCircleBig : classCircleSmall,
-            item?.year === selectedItem?.year ? classSelected : classUnSelected
-          ]">
-        <img v-if="item.icon" :src="item.icon" />
+        :class="[
+          'w-14 h-14 rounded-full flex items-center justify-center transition',
+          item.year === selectedItem?.year
+            ? 'bg-yellow scale-110'
+            : 'bg-white'
+        ]"
+      >
+        <img v-if="item.icon" :src="item.icon" class="w-8 h-8" />
       </div>
-      <div :class="[
-        'mt-2 transition-colors duration-300 ease-out',
-        item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-surface',
-        item.icon ? 'text-2xl' : 'text-lg'
-      ]">
+
+      <span
+        :class="[
+          'mt-2 text-sm',
+          item.year === selectedItem?.year
+            ? 'text-yellow font-bold'
+            : 'text-white'
+        ]"
+      >
         {{ item.year }}
-      </div>
+      </span>
     </div>
   </div>
 </template>
