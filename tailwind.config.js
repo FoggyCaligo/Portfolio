@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         brand: { DEFAULT: "#155DFC" },
-        yellow: { DEFAULT: "#F5FF42" },
-        whitecustom: { DEFAULT: "#FFFFFF" },
+        yellow: { DEFAULT: "#F5FF42"  },
+        surface: { DEFAULT: "#FFFFFF" },
       },
     },
   },

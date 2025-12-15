@@ -14,7 +14,7 @@
   const classCircleBig = "w-24 h-24";
   const classCircleSmall = "w-10 h-10";
   const classSelected = "bg-yellow scale-110";
-  const classUnSelected = "bg-white";
+  const classUnSelected = "bg-surface";
   
   
 </script>
@@ -32,7 +32,7 @@
       </div>
       <div :class="[
         'mt-2 transition-colors duration-300 ease-out',
-        item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-white',
+        item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-surface',
         item.icon ? 'text-2xl' : 'text-lg'
       ]">
         {{ item.year }}

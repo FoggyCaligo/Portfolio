@@ -26,7 +26,7 @@
       </div>
       <!-- Content (고정 & 내부 스크롤) -->
       <div class="flex-1 caret-none select-none ">
-        <div class="h-full py-8 px-12 bg-white rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+        <div class="h-full py-8 px-12 bg-surface rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
           <h3 class="text-3xl font-bold mb-4">
             {{ selectedItem?.title }}
           </h3>
