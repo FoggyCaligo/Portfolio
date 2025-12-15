@@ -9,13 +9,6 @@
   const emit = defineEmits<{
     (e: 'select', item: TimelineItem): void
   }>()
-
-  const classCircleBase = 'rounded-full transition-transform transition-colors duration-300 ease-out flex';
-  const classCircleBig = "w-24 h-24";
-  const classCircleSmall = "w-10 h-10";
-  const classSelected = "bg-yellow scale-110";
-  const classUnSelected = "bg-surface";
-  
   
 </script>
 <template>
