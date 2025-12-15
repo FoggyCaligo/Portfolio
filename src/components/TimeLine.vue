@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { TimelineItem } from '../data/timeline'
+  import type { TimelineItem } from '../data/timeLine'
   import TimeLineDesktop from './TimeLineDesktop.vue';
   import TimeLineMobile from './TimeLineMobile.vue';
   
@@ -14,7 +14,7 @@
 </script>
   
 <template>
-  <div class="h-full overflow-y-auto scrollbar-hide">
+  <div class="h-full w-fit overflow-y-auto scrollbar-hide">
     <div class="hidden md:block">
       <TimeLineDesktop
         :items="items"
