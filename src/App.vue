@@ -3,7 +3,7 @@
   </script>
   
   <template>
-    <div class="min-h-screen bg-brand px-4 md:px-20 py-5 overflow-hidden">
+    <div class="min-h-screen min-w-screen bg-brand px-14 py-5 overflow-x-hidden">
       <Navbar />
       <RouterView />
     </div>
