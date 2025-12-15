@@ -16,13 +16,10 @@ const getMenuClass = (path: string) => {
 </script>
 
 <template>
-<header class="sticky top-0 left-0 w-full h-fit flex items-center justify-between border-b-4 border-surface z-50 bg-brand pb-5">
+  <header class="sticky top-0 left-0 w-full h-fit flex items-center justify-between border-b-4 border-surface z-50 bg-brand pb-5">
     <!-- Left Title -->
     <div class="flex flex-col leading-tight">
-      <RouterLink 
-        to="/" 
-        class="text-6xl font-semibold text-surface select-none"
-      >
+      <RouterLink to="/" class="text-6xl font-semibold text-surface select-none">
         Shin - Jaeyong
       </RouterLink>
 

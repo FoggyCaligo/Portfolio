@@ -1,10 +1,13 @@
 <script setup>
   import Navbar from './components/Navbar.vue'
-  </script>
+  const mobilePadding = 'px-5'
+  const customPadding = 'md:px-20 px-5 md:px-20 py-5'
+
+</script>
   
-  <template>
-    <div class="min-h-screen min-w-screen bg-brand px-14 py-5 overflow-x-hidden">
-      <Navbar />
-      <RouterView />
-    </div>
-  </template>
+<template>
+  <div :class="'min-h-fill min-w-fill bg-brand ' + customPadding">
+    <Navbar />
+    <RouterView />
+  </div>
+</template>
