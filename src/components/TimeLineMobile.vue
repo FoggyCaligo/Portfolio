@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { nextTick, watch, ref } from 'vue'
+  import { ref } from 'vue'
   import type { TimelineItem } from '../data/timeLine'
   import { useScrollIntoView } from '../composables/useScrollIntoView'
   
@@ -22,17 +22,13 @@
 
   const select = (item: TimelineItem  ) => {
     emit('select', item);
-    nextTick(() => {
-      itemRefs.value[item.year]?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-      // itemRefs.value[item.year]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      // useScrollIntoView(itemRefs.value[item.year]);
-    });
+    useScrollIntoView(itemRefs.value[item.year]);
   }
 
 </script>
 <template>
   <div 
-  class="relative w-fit h-fit flex flex-row gap-6 px-2 py-6 items-center"
+  class="relative w-fit h-fit flex flex-row gap-6 px-2 py-6 items-center caret-none select-none cursor-pointer"
   >
     <div
       v-for="item in items"
