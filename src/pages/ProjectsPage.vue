@@ -13,24 +13,24 @@
 </script>
 
 <template>
-  <div class="flex w-full justify-between h-[calc(100dvh-160px)] overflow-hidden gap-12 pt-10">
-    <div class="flex-shrink-0">
+  <div class="flex flex-col md:flex-row overflow-hidden justify-between h-[calc(100dvh-160px)]  md:pt-10 pt-0">
+    
+    <div class="md:w-fit md:h-full w-full h-fit">
       <TimeLine
         :items="timelineData"
         :selectedItem="selectedItem"
         @select="handleSelect"
       />
     </div>
-    <div class="flex-1 caret-none select-none ">
-      <div class="h-full py-8 px-12 bg-surface rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
-        <h3 class="text-3xl font-bold mb-4">
-          {{ selectedItem?.title }}
-        </h3>
-        <h5>{{ selectedItem?.year }}</h5>
-        <p class="text-gray-700 break-words break-all whitespace-pre-line">
-          {{ selectedItem?.description }}
-        </p>
-      </div>
+
+    <div class="w-full h-full md:py-8 md:px-12 py-6 px-6 ml-0 md:ml-12 bg-surface rounded-xl shadow-lg overflow-y-scroll scrollbar-hide">
+      <h3 class="md:text-3xl text-2xl font-bold mb-4">
+        {{ selectedItem?.title }}
+      </h3>
+      <h5>{{ selectedItem?.year }}</h5>
+      <p class="text-gray-700 break-words break-all whitespace-pre-line">
+        {{ selectedItem?.description }}
+      </p>
     </div>
   </div>
 </template> 

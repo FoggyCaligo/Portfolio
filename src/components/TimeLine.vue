@@ -14,8 +14,8 @@
 </script>
   
 <template>
-  <div class="h-full w-fit overflow-y-auto scrollbar-hide">
-    <div class="hidden md:block">
+  <div class="h-full w-full overflow-hidden">
+    <div class="hidden md:block overflow-y-scroll h-full scrollbar-hide">
       <TimeLineDesktop
         :items="items"
         :selectedItem="selectedItem"
@@ -23,7 +23,7 @@
       />
     </div>
 
-    <div class="block md:hidden">
+    <div class="block md:hidden  overflow-x-scroll  scrollbar-hide">
       <TimeLineMobile
         :items="items"
         :selectedItem="selectedItem"

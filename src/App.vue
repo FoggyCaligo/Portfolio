@@ -6,7 +6,7 @@
 </script>
   
 <template>
-  <div :class="'min-h-fill min-w-fill bg-brand ' + customPadding">
+  <div :class="'bg-brand ' + customPadding">
     <Navbar />
     <RouterView />
   </div>

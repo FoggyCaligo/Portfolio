@@ -12,11 +12,13 @@
   
 </script>
 <template>
-  <div class="flex gap-6 overflow-x-scroll px-4 py-6 scrollbar-hide">
+  <div 
+  class="relative w-fit h-fit flex flex-row gap-6 px-2 py-6 items-center"
+  >
     <div
       v-for="item in items"
       :key="item.year"
-      class="flex-shrink-0 flex flex-col items-center cursor-pointer"
+      class="flex flex-col items-center cursor-pointer"
       @click="$emit('select', item)"
     >
       <div
@@ -27,7 +29,7 @@
             : 'bg-white'
         ]"
       >
-        <img v-if="item.icon" :src="item.icon" class="w-8 h-8" />
+        <img v-if="item.icon" :src="item.icon" class="w-10 h-10" />
       </div>
 
       <span
