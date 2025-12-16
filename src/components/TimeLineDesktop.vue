@@ -17,27 +17,22 @@
   
   const itemRefs = ref<Record<number, HTMLElement | undefined>>({});
 
-  function setItemRef(year: number, el: unknown) {
+  const setItemRef = (year: number, el: unknown) => {
     if (el instanceof HTMLElement) {
       itemRefs.value[year] = el
     }
   }
 
-  watch(
-    () => props.selectedItem,
-    async (item) => {
-      if (!item) return
-      await nextTick()
-      useScrollIntoView(itemRefs.value[item.year])
-    },
-    { immediate: true }
-  )
+  const select = (item: TimelineItem) => {
+    emit('select', item);
+    useScrollIntoView(itemRefs.value[item.year]);
+  }
 </script>
   
 <template>
   <div :class="classMainWrapper" >
     <div :class="classCenterLine"/>
-    <div v-for="item in items" :key="item.year" :class="classItem" @click="emit('select', item)" :ref="el => setItemRef(item.year, el)">
+    <div v-for="item in items" :key="item.year" :class="classItem" @click="select(item)" :ref="el => setItemRef(item.year, el)">
       <div :class="[
         'absolute mr-12 whitespace-nowrap duration-300 ease-out no-caret',
         item?.year === selectedItem?.year ? 'text-yellow font-bold' : 'text-surface',

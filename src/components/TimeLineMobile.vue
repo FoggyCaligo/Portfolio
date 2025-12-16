@@ -1,7 +1,10 @@
 <script setup lang="ts">
+  import { nextTick, watch, ref } from 'vue'
   import type { TimelineItem } from '../data/timeLine'
+  import { useScrollIntoView } from '../composables/useScrollIntoView'
   
-  defineProps<{
+  
+  const props = defineProps<{
     items: TimelineItem[]
     selectedItem: TimelineItem | undefined
   }>()
@@ -9,7 +12,23 @@
   const emit = defineEmits<{
     (e: 'select', item: TimelineItem): void
   }>()
-  
+  const itemRefs = ref<Record<number, HTMLElement | undefined>>({});
+
+  function setItemRef(year: number, el: unknown) {
+    if (el instanceof HTMLElement) {
+      itemRefs.value[year] = el
+    }
+  }
+
+  const select = (item: TimelineItem  ) => {
+    emit('select', item);
+    nextTick(() => {
+      itemRefs.value[item.year]?.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      // itemRefs.value[item.year]?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // useScrollIntoView(itemRefs.value[item.year]);
+    });
+  }
+
 </script>
 <template>
   <div 
@@ -19,7 +38,8 @@
       v-for="item in items"
       :key="item.year"
       class="flex flex-col items-center cursor-pointer"
-      @click="$emit('select', item)"
+      @click="select(item)"
+      :ref="el => setItemRef(item.year, el)"
     >
       <div
         :class="[
