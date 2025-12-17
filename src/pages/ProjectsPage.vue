@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue'
   import { timelineData } from '../data/timeLine'
-  import TimeLine from '../components/TimeLine.vue'
+  import TimeLine from '../components/ProjectsPage/TimeLine.vue'
   import type { TimelineItem } from '../data/timeLine'
   
   const selectedItem = ref<TimelineItem | undefined>(timelineData[4])
