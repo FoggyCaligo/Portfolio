@@ -6,8 +6,8 @@
 </script>
   
 <template>
-  <div :class="'bg-brand ' + customPadding">
-    <Navbar />
+  <div :class="'bg-brand ' + customPadding"  style="--nav-h: 10rem">
+    <Navbar/>
     <RouterView />
   </div>
 </template>

@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row overflow-hidden justify-between h-[calc(100dvh-160px)]  md:pt-10 pt-0">
+  <div class="flex flex-col md:flex-row overflow-hidden justify-between h-[calc(100dvh-var(--nav-h))]  md:pt-10 pt-0">
     
     <div class="md:w-fit md:h-full w-full h-fit">
       <TimeLine

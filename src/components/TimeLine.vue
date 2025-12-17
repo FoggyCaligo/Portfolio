@@ -22,8 +22,7 @@
         @select="emit('select', $event)"
       />
     </div>
-
-    <div class="block md:hidden  overflow-x-scroll  scrollbar-hide">
+    <div class="block md:hidden overflow-x-scroll scrollbar-hide">
       <TimeLineMobile
         :items="items"
         :selectedItem="selectedItem"
