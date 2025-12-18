@@ -37,8 +37,6 @@ import ProfileMobile from '../components/AboutPage/ProfileMobile.vue';
           aseprite로 64비트 픽셀아트 애니메이션을 취미로 만들고 있습니다. 
           할 줄 아는거 많습니다. 정말 열심히 임하겠습니다.
           
-          
-          
           1. 지원 동기
 
           프론트엔드 개발자는 사용자와 가장 가까운 위치에서 서비스를 완성하는 역할이라고 생각합니다.
