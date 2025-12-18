@@ -16,9 +16,7 @@ import ProfileMobile from '../components/AboutPage/ProfileMobile.vue';
       </h3>
       <p class="text-surface break-words whitespace-pre-line">
         {{
-          `
-          
-          0. 작성자의 말
+          `0. 작성자의 말
           컴퓨터공학과를 졸업한 후, 산업기능요원으로서 임상시험 플랫폼 업체에서 근무하다 이직을 준비하고 있는 프론트엔드 개발자입니다.
           
           근무 당시 신규 서비스인 "간병인-보호자 매칭 플랫폼"의 개발에 중간투입되어 "간병인 파트"의 서비스에 대한 프론트엔드 전반을 담당한 경험이 있습니다. 
@@ -38,6 +36,7 @@ import ProfileMobile from '../components/AboutPage/ProfileMobile.vue';
           clip studio로 간단한 그림을 그려 크라우드픽이란 사이트에서 판매하고 있습니다.
           aseprite로 64비트 픽셀아트 애니메이션을 취미로 만들고 있습니다. 
           할 줄 아는거 많습니다. 정말 열심히 임하겠습니다.
+          
           
           
           1. 지원 동기
