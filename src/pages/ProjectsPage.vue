@@ -10,7 +10,7 @@
     selectedItem.value = item
   }
 
-</script>
+</script> 
 
 <template>
   <div class="flex flex-col md:flex-row overflow-hidden justify-between h-[calc(100dvh-var(--nav-h))]  md:pt-10 pt-0">
