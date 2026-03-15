@@ -15,11 +15,6 @@ const activeModal = ref<ActiveModal>(null);
 </script>
 
 <template>
-  <!-- <div class="w-full h-fit flex flex-row ">
-    <div :class="btnClass">Profile</div>
-    <div :class="btnClass">Contact</div>
-  </div> -->
-
   <div class="w-full flex justify-center gap-2 text-white/80 text-sm">
     <button
       :class="btnClass"
