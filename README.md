@@ -6,7 +6,11 @@ Vue 3, TypeScript, Vite, TailwindCSS를 사용하여 제작한 개인 포트폴�
 
 <br>
 
-![프로젝트 스크린샷](https://via.placeholder.com/800x400.png?text= ![alt text](image.png))
+![프로젝트 스크린샷 : 데스크탑](image.png)
+![프로젝트 스크린샷 : 모바일](image_mobile.png)
+
+
+
 
 <br>
 
