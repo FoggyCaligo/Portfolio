@@ -7,7 +7,8 @@ const hclass = 'text-yellow pt-10'
 
 
 <template>
-    <div class="text-2xl font-bold">
+
+    <div class="text-2xl font-bold h-[calc(100dvh-var(--nav-h))]  overflow-y-scroll scrollbar-hide">
       <h1 :class="hclass">Tooling</h1>
       <Format title="JavaScript / HTML / CSS">
           브라우저에서 사용자의 입력과 상태 변화에 따라 화면이 동적으로 반응하도록 구현하는 데 주력해 왔습니다. <br/>
